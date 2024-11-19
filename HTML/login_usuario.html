@@ -1,0 +1,53 @@
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="../CSS/style4.css">
+    </head>
+    
+<body>
+    <header>
+        <nav class="navbar">
+          <div class="logo">
+            <a href="../index.html">
+              <img src="../img/logo.png" alt="Logo do Site" class="logo-img" />
+            </a>
+            <h1>Bora pro racha!</h1>
+          </div>
+          <ul class="menu">
+            <li><a href="../HTML/sobrenos.html">Sobre Nós</a></li>
+            <li><a href="../HTML/contato.html">Contato</a></li>
+            <li><a href="../HTML/nq.html">Nossas Quadras</a></li>
+          </ul>
+          <div class="auth-links">
+            <a href="/HTML/login_usuario.html">Login</a> | <a href="/HTML/cad_usuario.html">Cadastro</a> | <a href="http://localhost:8080/php/logout.php">Sair</a>
+          </div>
+          <div class="Conta">
+            <span id="userName"></span>
+            <img src="../Untitled_design-removebg-preview (1).png" alt="Minha conta" class="conta-img"> 
+            </a>
+        </div>
+        </nav>
+      </header>
+    <div class="profile-container">
+    <h2>Acesse sua conta</h2>
+    <form method="POST" action="">
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email" required>
+        <br>
+        <label for="senha">Senha:</label>
+        <input type="password" id="senha" name="senha" required>
+        <input type="submit" id="entrar" value="Registrar">
+        <br>
+    </form>
+    </div>
+    <footer>
+        <p>&copy; 2024 Bora Pro Racha. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
+<script src="../JS/back.js"></script>

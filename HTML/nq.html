@@ -1,0 +1,107 @@
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Menu Principal</title>
+    <link rel="stylesheet" href="../CSS/style.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="logo">
+          <a href="../index.html">
+            <img src="../img/logo.png" alt="Logo do Site" class="logo-img" />
+          </a>
+          <h1>Bora pro racha!</h1>
+        </div>
+        <ul class="menu">
+          <li><a href="../HTML/sobrenos.html">Sobre Nós</a></li>
+          <li><a href="../HTML/contato.html">Contato</a></li>
+          <li><a href="../HTML/nq.html">Nossas Quadras</a></li>
+        </ul>
+        <div class="auth-links">
+          <a href="/HTML/login_usuario.html">Login</a> | <a href="/HTML/cad_usuario.html">Cadastro</a> | <a href="#" id="sair">Sair</a>
+        </div>
+        <div class="Conta">
+          <span id="userName"></span>
+          <a href="../HTML/conta.html">
+          
+          <img src="../Untitled_design-removebg-preview (1).png" alt="Minha conta" class="conta-img"> 
+          </a>
+      </div>
+      </nav>
+    </header>
+    <main>
+      <h1 class="title">Nossas Quadras</h1>
+      <div class="quadras-container">
+        <div class="quadra">
+          <img src="../img/Quadra1.jpg" alt="Quadra 1" class="quadra-img" />
+          <h2>Quadra 1 - Futebol Society</h2>
+          <button onclick="openAvailabilityModal('Futebol Society')">
+            Ver Disponibilidade
+          </button>
+        </div>
+
+        <div class="quadra">
+          <img src="../img/Quadra2.jpg" alt="Quadra 2" class="quadra-img" />
+          <h2>Quadra 2 - Vôlei de Praia</h2>
+          <button onclick="openAvailabilityModal('Vôlei de Praia')">
+            Ver Disponibilidade
+          </button>
+        </div>
+
+        <div class="quadra">
+          <img src="../img/Quadra4.png" alt="Quadra 3" class="quadra-img" />
+          <h2>Quadra 3 - Basquete</h2>
+          <button onclick="openAvailabilityModal('Basquete')">
+            Ver Disponibilidade
+          </button>
+        </div>
+        <div class="quadra">
+          <img src="../img/Quadra5.jpg" alt="Quadra 4" class="quadra-img" />
+          <h2>Quadra 4 - Tênis</h2>
+          <button onclick="openAvailabilityModal('Tênis')">
+            Ver Disponibilidade
+          </button>
+        </div>
+      </div>
+      <button onclick="openMyReservations()" class="my-reservations-btn">
+        Minhas Reservas
+      </button>
+    </main>
+    <div id="availabilityModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeAvailabilityModal()">&times;</span>
+        <h2>Disponibilidade - <span id="quadraName"></span></h2>
+        <label for="date">Escolha uma data:</label>
+        <input type="date" id="date" onchange="showAvailableTimes()" />
+        <div id="availableTimes"></div>
+        <button onclick="closeAvailabilityModal()">OK</button>
+      </div>
+    </div>
+
+    <div id="confirmationModal" class="modal">
+      <div class="modal-content">
+        <h2>Reserva Confirmada!</h2>
+        <p>Estamos ansiosos para vê-lo em nossa quadra!</p>
+        <button onclick="closeConfirmationModal()">OK</button>
+      </div>
+    </div>
+
+    <div id="myReservationsModal" class="modal">
+      <div class="modal-content">
+        <h2>Minhas Reservas</h2>
+        <div id="myReservationsList"></div>
+        <button onclick="closeMyReservations()">OK</button>
+      </div>
+    </div>
+    <footer>
+      <p>&copy; 2024 Bora Pro Racha! Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="../JS/script.js"></script>
+    <script src="../JS/back.js"></script>
+  </body>
+</html>
